@@ -22,7 +22,7 @@ connection.connect(function(error)
     else
     {
         console.log('Connected');
-        msg="Connected";
+        msg="You are Connected!!";
     }
 })
 
@@ -37,6 +37,7 @@ app.get('/',(req,res) => {
         {
             console.log('Successful Query');
         }
+        res.send(rows);
     })
 })
 
