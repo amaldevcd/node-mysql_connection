@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database:'',
+    database:'sample',
 });
 
 connection.connect(function(error)
@@ -28,7 +28,7 @@ connection.connect(function(error)
 
 app.get('/',(req,res) => {
     
-    connection.query("Select * from sample",function(error,rows,fields){
+    connection.query("Select * from samptab",function(error,rows,fields){
         if(!!error)
         {
             console.log('Error in Query');
